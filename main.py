@@ -1,4 +1,4 @@
-from peices import peices as cards
+from pieces import pieces as cards
 from time import sleep
 from random import randint, shuffle
 import pygame
@@ -18,7 +18,7 @@ i = 3
 current_card = ''
 img = ''
 
-questions_conts = ['Name?', 'Artist?', 'Year?']
+questions_const = ['Name?', 'Artist?', 'Year?']
 questions       = ['Artist?', 'Year?', 'Name?'] # example
 answers =         ['joe',      1992,   'pants'] # example
 
@@ -27,7 +27,7 @@ answers = []
 
 def adjusted_index():
     temp = []
-    for i in questions_conts:
+    for i in questions_const:
         temp.append(questions.index(i))
 
     return temp
@@ -45,7 +45,7 @@ def assign_answers():
 def randomize_questions():
     global questions 
     questions = []
-    for i in questions_conts:
+    for i in questions_const:
         questions.append(i)
     shuffle(questions)
     assign_answers()
